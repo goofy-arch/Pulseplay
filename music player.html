@@ -9,6 +9,7 @@
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_arrow" />
   <style>
    body {
             font-family: 'Roboto', sans-serif;
@@ -21,7 +22,7 @@
    <div class="w-64 bg-gray-800 p-6">
     <div class="mb-8">
      <h1 class="text-3xl font-bold">
-      Spotify
+      Music Player
      </h1>
     </div>
     <nav class="space-y-4">
@@ -59,7 +60,7 @@
       </li>
       <li>
        <a class="text-gray-400 hover:text-white" href="#">
-        Release Radar
+        Recent releases
        </a>
       </li>
       <li>
@@ -218,6 +219,13 @@
       </div>
       <div class="bg-gray-700 p-4 rounded-lg">
        <img alt="Album cover of recently played song 5" class="w-full h-32 object-cover rounded" height="150" src="https://storage.googleapis.com/a1aa/image/BrPLI1r8aDpcOR8vhl97C9VIzd77KeBkhIZxoLXpPi53zq2JA.jpg" width="150"/>
+         <span class="material-symbols-outlined">
+           play_arrow
+         </span>
+
+        <button id="playAudio1">Play 
+            <audio id="audio1" src="https://www.youtube.com/watch?v=7frfkBdV0-w"></audio>
+          </button> 
        <h3 class="mt-2 text-lg">
         Song Title 5
        </h3>
@@ -229,5 +237,39 @@
     </div>
    </div>
   </div>
+
+    
+
+    <button id="playAudio2">Play </button>
+
+  
+    <audio id="audio2" src="https://www.youtube.com/watch?v=V9PVRfjEBTI"></audio>
+
+    <script>
+        
+        const audio1 = document.getElementById('audio1');
+        const audio2 = document.getElementById('audio2');
+
+        
+        document.getElementById('playAudio1').addEventListener('click', function() {
+            audio1.currentTime = 0; 
+            audio1.play(); 
+        });
+
+        document.getElementById('playAudio2').addEventListener('click', function() {
+            audio2.currentTime = 0; 
+            audio2.play(); 
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
  </body>
 </html>
