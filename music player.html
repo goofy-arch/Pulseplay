@@ -3,19 +3,46 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Spotify Clone
+MUSIC PLAYER
   </title>
+  <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_arrow" />
-  <style>
+ <style>
    body {
-            font-family: 'Roboto', sans-serif;
+            font-family: righteous, sans-serif;
         }
+       .button {
+            padding: 5px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+         .container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;    /* Center vertically */
+            height: 50vh;         /* Full viewport height */
+            background-color: gray-700;
+        }
+
   </style>
- </head>
+ <script>src="https://unpkg.com/howler@2.2.3/dist/howler.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+</head>
+
  <body class="bg-gray-900 text-white">
   <div class="flex h-screen">
    <!-- Sidebar -->
@@ -44,7 +71,7 @@
       <i class="fas fa-book">
       </i>
       <span>
-       Your Library
+      Your Library 
       </span>
      </a>
     </nav>
@@ -52,82 +79,65 @@
      <h2 class="text-lg font-semibold mb-4">
       Playlists
      </h2>
-     <ul class="space-y-2">
-      <li>
+     <ul class="space-y--1">
+        
+     <li data-src="path/to/song1.mp3">
+     <a class="text-gray-400 hover:text-white" href="#">
+         Money On My Mind - DARKO
+      </a>
+
+      </li>
+     <li data-src="path/to/song2.mp3">
        <a class="text-gray-400 hover:text-white" href="#">
-        Discover Weekly
+        Back In Action - The Shire
+       </a>
+      </li>
+      <li data-src="path/to/song3.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">
+        Every Day Is Summer - The Shire
+       </a>
+      </li>
+     <li data-src="path/to/song4.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">                             
+        Chill Day - LAKEY INSPIRED
+       </a>
+      </li>
+      <li data-src="path/to/song5.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">
+        Sunny - KODOMOi
+       </a>
+      </li>
+      <li data-src="path/to/song6.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">
+        Dreams - Joakim Karud
+       </a>
+      </li>
+      <li data-src="path/to/song7.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">
+        Island - Declan DP
+       </a>
+      </li>
+      <li data-src="path/to/song8.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">
+        Funky One - Bensound
+       </a>
+      </li>
+       <li data-src="path/to/song9.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">
+        Happy - MBB
+       </a>
+      </li>
+      <li data-src="path/to/song10.mp3">
+       <a class="text-gray-400 hover:text-white" href="#">
+       Going Higher - Bensound
        </a>
       </li>
       <li>
        <a class="text-gray-400 hover:text-white" href="#">
-        Recent releases
+        liked songs
        </a>
       </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Daily Mix 1
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Daily Mix 2
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Daily Mix 3
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Daily Mix 4
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Daily Mix 5
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Daily Mix 6
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Liked Songs
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Top Hits
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Chill Vibes
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Workout
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Party
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Focus
-       </a>
-      </li>
-      <li>
-       <a class="text-gray-400 hover:text-white" href="#">
-        Sleep
-       </a>
-      </li>
+     
      </ul>
     </div>
    </div>
@@ -166,7 +176,8 @@
        <img alt="Album cover of Daily Mix 3 playlist" class="w-16 h-16 rounded" height="64" src="https://storage.googleapis.com/a1aa/image/R2if2cbeChjJE0Iju8GI8KIJONEaJIRnvrMaAMjE1nbrnVtTA.jpg" width="64"/>
        <span>
         Daily Mix 3
-       </span>
+      </span>
+     
       </div>
       <div class="bg-gray-700 p-4 rounded-lg flex items-center space-x-4">
        <img alt="Album cover of Daily Mix 4 playlist" class="w-16 h-16 rounded" height="64" src="https://storage.googleapis.com/a1aa/image/TRq63uqWusbrBRKEhfXNeITbCpKUf1uT3lH4U8p8oGRgPranA.jpg" width="64"/>
@@ -175,6 +186,7 @@
        </span>
       </div>
      </div>
+
     </div>
     <div>
      <h2 class="text-2xl font-bold">
@@ -219,13 +231,7 @@
       </div>
       <div class="bg-gray-700 p-4 rounded-lg">
        <img alt="Album cover of recently played song 5" class="w-full h-32 object-cover rounded" height="150" src="https://storage.googleapis.com/a1aa/image/BrPLI1r8aDpcOR8vhl97C9VIzd77KeBkhIZxoLXpPi53zq2JA.jpg" width="150"/>
-         <span class="material-symbols-outlined">
-           play_arrow
-         </span>
-
-        <button id="playAudio1">Play 
-            <audio id="audio1" src="https://www.youtube.com/watch?v=7frfkBdV0-w"></audio>
-          </button> 
+        
        <h3 class="mt-2 text-lg">
         Song Title 5
        </h3>
@@ -233,14 +239,24 @@
         Artist 5
        </p>
       </div>
-          <button id="playAudio2">Play
-            
-    <audio id="audio2" src="https://www.youtube.com/watch?v=V9PVRfjEBTI"></audio>
-          </button>
+          
      </div>
     </div>
    </div>
   </div>
+ 
+<div class="container">
+<div class="btn-group">
+  <button type="button" id="play"class="btn btn-dark">Play</button>
+ <button type="button" id="pause"class="btn btn-secondary">Pause</button>
+<button type="button" id="next"class="btn btn-dark">next</button>
+<button type="button" id="Previous"class="btn btn-secondary">previous</button>
+</div>    
+</div>
+
+    <script src="script.js"></script>
+ </body>
+</html>
 
     
 
