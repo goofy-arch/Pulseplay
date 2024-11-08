@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to a CSS file for styling -->
+    <script src="https://unpkg.com/howler@2.2.3/dist/howler.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: gray-700;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        #songList {
+            list-style: none;
+            padding: 0;
+        }
+        #songList li {
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Music Player</h1>
+    <ul id="songList">
+        <li data-src="path/to/song1.mp3">Money On My Mind - DARKO</li>
+        <li data-src="path/to/song2.mp3">Back In Action - The Shire</li>
+        <li data-src="path/to/song3.mp3">Every Day Is Summer - The Shire</li>
+        <li data-src="path/to/song4.mp3">Chill Day - LAKEY INSPIRED</li>
+        <li data-src="path/to/song5.mp3">Sunny - KODOMOi</li>
+        <li data-src="path/to/song6.mp3">Dreams - Joakim Karud</li>
+        <li data-src="path/to/song7.mp3">Island - Declan DP</li>
+        <li data-src="path/to/song8.mp3">Funky One - Bensound</li>
+        <li data-src="path/to/song9.mp3">Happy - MBB</li>
+        <li data-src="path/to/song10.mp3">Going Higher - Bensound</li>
+    </ul>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="next">Next</button>
+    <button id="prev">Previous</button>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
